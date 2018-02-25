@@ -1007,27 +1007,27 @@ header{
 		}
 
 		.look-image:first-child{
-			background: url(/images/share-your-look-1.jpg) center/cover no-repeat;
+			background: url(images/share-your-look-1.jpg) center/cover no-repeat;
 		}
 
 		.look-image:nth-child(2){
-			background: url(/images/share-your-look-2.jpg) center/cover no-repeat;
+			background: url(images/share-your-look-2.jpg) center/cover no-repeat;
 		}
 
 		.look-image:nth-child(3){
-			background: url(/images/share-your-look-3.jpg) center/cover no-repeat;
+			background: url(images/share-your-look-3.jpg) center/cover no-repeat;
 		}
 
 		.look-image:nth-child(4){
-			background: url(/images/share-your-look-4.jpg) center/cover no-repeat;
+			background: url(images/share-your-look-4.jpg) center/cover no-repeat;
 		}
 
 		.look-image:nth-child(5){
-			background: url(/images/share-your-look-5.jpg) center/cover no-repeat;
+			background: url(images/share-your-look-5.jpg) center/cover no-repeat;
 		}
 
 		.look-image:last-child{
-			background: url(/images/share-your-look-6.jpg) center/cover no-repeat;
+			background: url(images/share-your-look-6.jpg) center/cover no-repeat;
 		}
 	
 		/*CONTACTS*/
