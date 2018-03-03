@@ -20,8 +20,8 @@
 
 	<!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="slick-1.8.0/slick/slick.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script src="slick-1.8.0/slick/slick.min.js"></script>
+	<script src="script.js"></script>
 
 </head>
 <body>
@@ -45,6 +45,7 @@ HEADER
 				<a href="#"><span>home</span></a>
 				<!-- SHOP -->
 				<a href="#" id="shop-link"><span>shop </span><i class="material-icons">keyboard_arrow_down</i></a>
+
 				<div id="shop" class="nav-menu-expanded">
 
 					<ul>
@@ -226,7 +227,7 @@ HEADER
 				
 				<a href="#" class="logo">
 
-					<img src="images/logo.png" alt="">
+					<img src="images/logo.png" alt="Logo">
 					<h4>fashion store</h4>
 
 				</a>
@@ -234,11 +235,11 @@ HEADER
 
 
 			<nav class="nav-search">
-				
 
-				<a href="#" id="search-button">
+
+				<button id="search-button">
 					<i class="material-icons">search</i>
-				</a>
+				</button>
 
 				
 				<div id="user-button">
@@ -254,11 +255,58 @@ HEADER
 
 
 				<div id="my-cart-button">
-					<i class="material-icons">shopping_basket</i>
-					<div>
-						<h5>my cart</h5>
-						<p>no products in the cart</p>
+					
+					<div class="cart-icon">
+						<i class="material-icons">shopping_basket</i>
+						<span id="incart-counter">0</span>
 					</div>
+
+					<div id=cart>
+						
+						<h5>my cart</h5>
+						
+						<div>
+
+							<p>no products in the cart</p>
+							
+								<ul>
+
+									<!-- <li class="cart_products clearfix">
+
+										<img src="images/SKIRT-WITH-ASYMMETRIC-FRILL_4-370x458.jpg" alt="cart_product_img">
+
+										<div>
+
+											<p>Skirt with asymmetric frill</p>
+
+											<div class="quantity">
+
+												<span>1</span>
+												&#x2716;
+												<span>44.00$</span>
+
+											</div>
+
+										</div>
+
+										<button class="delete_product">&#x2716;</span>
+
+									</li> -->
+
+								</ul>
+
+							<div id="cart_total">
+								subtotal:
+								<span></span>
+							</div>
+
+							<a id="view_cart" href="#">view cart</a>
+							<a id="checkout" href="#">checkout</a>
+
+						</div>
+
+					</div>
+
 				</div>
 
 				<select id="currency">
@@ -282,7 +330,7 @@ HEADER
 				</form>
 				
 				<span>
-					<div class="vertical-line"></div>
+					<span class="vertical-line"></span>
 
 					<a href="#" id="close-button">&#x2715;</a>
 				</span>
@@ -378,20 +426,20 @@ SUB MAIN
 		<!-- INFO-PLATES -->
 		<div class="info-plates container clearfix">
 			
-			<div class="first-image"> <img src="images/banner-img-1.png"> </div>
+			<div class="first-image"> <img src="images/banner-img-1.png" alt="banner-img-1"> </div>
 			
-			<div> <img src="images/banner-img-2.png"> </div>
+			<div> <img src="images/banner-img-2.png" alt="banner-img-2"> </div>
 			
 			<div> 
 
-				<div> <img src="images/banner-img-3-1.png"> </div>
-				<div> <img src="images/banner-img-3-2.png"> </div>
+				<div> <img src="images/banner-img-3-1.png" alt="banner-img-3-1"> </div>
+				<div> <img src="images/banner-img-3-2.png" alt="banner-img-3-2"> </div>
 
 			</div>
 
 			<div>
 
-				<img src="images/banner-img-4.png">
+				<img src="images/banner-img-4.png" alt="banner-img-4">
 
 			</div>
 
@@ -411,10 +459,10 @@ SUB MAIN
 
 					<div class="slide-image-section">
 
-						<div class="images clearfix">
+						<div data-id=true class="images clearfix">
 							
-							<img src="images/SKIRT-WITH-ASYMMETRIC-FRILL_4-370x458.jpg">
-							<img src="images/SKIRT-WITH-ASYMMETRIC-FRILL_2-370x458.jpg">
+							<img src="images/SKIRT-WITH-ASYMMETRIC-FRILL_4-370x458.jpg" alt="skirt-1">
+							<img src="images/SKIRT-WITH-ASYMMETRIC-FRILL_2-370x458.jpg" alt="skirt-2">
 
 						</div>
 						
@@ -432,7 +480,7 @@ SUB MAIN
 							</span>
 						</div>
 
-						<a id="add-cart" href="#">add to cart</a>
+						<a data-id="1" class="add-cart" href="#">add to cart</a>
 
 					</div>
 
@@ -440,7 +488,7 @@ SUB MAIN
 
 						<a href="#" class="product-name">skirt with frill</a>
 
-						<span class="price">44.00$</span>
+						<div><span class="price">44.00$</span></div>
 
 						<div class="wishlist">
 
@@ -455,47 +503,45 @@ SUB MAIN
 				</div>
 
 				<div class="slide">
-					
-					<div>
+
+					<div class="slide-image-section">
+
+						<div class="images">
+							<img src="images/TEXT-T-SHIRT_1-370x458.jpg" alt="t-shirt-1">
+							<img src="images/TEXT-T-SHIRT_2-370x458.jpg" alt="t-shirt-2">
+						</div>
 						
-						<div class="slide-image-section">
+						<div>
 
-							<div class="images">
-								<img src="images/TEXT-T-SHIRT_1-370x458.jpg">
-								<img src="images/TEXT-T-SHIRT_2-370x458.jpg">
-							</div>
+							<span class="featured">featured</span>
+							
+							<span class="rating">
 
-							<div>
-								<span class="featured">featured</span>
-									
-								<span class="rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
 
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-
-								</span>
-							</div>
-
-							<a id="add-cart" href="#">add to cart</a>
+							</span>
 
 						</div>
 
-						<div class="slide-text-section">
+						<a data-id="2" class="add-cart" href="#">add to cart</a>
 
-							<a href="#" class="product-name">text t-shirt</a>
+					</div>
 
-							<span class="price">16.00$</span>
+					<div class="slide-text-section">
 
-							<div class="wishlist">
+						<a href="#" class="product-name">text t-shirt</a>
 
-								<i class="fas fa-chart-area"></i>
-								<i class="far fa-heart"></i>
-								<i class="fas fa-eye"></i>
+						<div><span class="price">16.00$</span></div>
 
-							</div>
+						<div class="wishlist">
+
+							<i class="fas fa-chart-area"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-eye"></i>
 
 						</div>
 
@@ -505,95 +551,96 @@ SUB MAIN
 
 				<!-- ========= -->
 				<div class="slide">
-
-					<div>
-						<div class="slide-image-section">
-							<div class="images">
-								<img src="images/BASIC-LEATHER-JACKET_1-370x458.jpg">
-								<img src="images/BASIC-LEATHER-JACKET_3-370x458.jpg">
-							</div>
-							
-							<div>
-								<span class="on-sale">sale</span>
-
-								<span class="rating">
-
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-
-								</span>
-							</div>
-
-							<a href="#" id="add-cart">add to cart</a>
-
+					<div class="slide-image-section">
+						<div class="images">
+							<img src="images/BASIC-LEATHER-JACKET_1-370x458.jpg" alt="leather-jacket-1">
+							<img src="images/BASIC-LEATHER-JACKET_3-370x458.jpg" alt="leather-jacket-2">
 						</div>
 						
-						<div class="slide-text-section">
+						<div>
+							<span class="on-sale">sale</span>
+
+							<span class="rating">
+
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+
+							</span>
+						</div>
+
+						<a data-id="3" href="#" class="add-cart">add to cart</a>
+
+					</div>
+				
+					<div class="slide-text-section">
+						
+						<a href="#" class="product-name">basic leather jacket</a>
+
+						<div>
 							
-							<a href="#" class="product-name">basic leather jacket</a>
+							<span class="old-price">45.89$</span>
+							
+							<span class="price"> 40.00$</span>
+						
+						</div>
 
-							<span class="price"><span>45.89$</span> 40.00$</span>
+						<div class="wishlist">
 
-							<div class="wishlist">
-
-								<i class="fas fa-chart-area"></i>
-								<i class="far fa-heart"></i>
-								<i class="fas fa-eye"></i>
-
-							</div>
+							<i class="fas fa-chart-area"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-eye"></i>
 
 						</div>
-					</div>
 
+					</div>
+				
 				</div>
 				<!-- =========== -->
 				<div class="slide">
-				
-					<div>
 
-						<div class="slide-image-section">
+					<div class="slide-image-section">
 
-							<div class="images">
-								<img src="images/OVERSIZED-THREE-QUARTER-LENGTH-COAT_2-370x458.jpg">
-								<img src="images/OVERSIZED-THREE-QUARTER-LENGTH-COAT_4-370x458.jpg">
-							</div>
-							
-							<div>
+						<div class="images">
+							<img src="images/OVERSIZED-THREE-QUARTER-LENGTH-COAT_2-370x458.jpg" alt="coat-1">
+							<img src="images/OVERSIZED-THREE-QUARTER-LENGTH-COAT_4-370x458.jpg" alt="coat-2">
+						</div>
+						
+						<div>
 
-								<span class="on-sale">sale</span>
+							<span class="on-sale">sale</span>
 
-								<span class="rating">
+							<span class="rating">
 
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
-									<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
 
-								</span>
-
-							</div>
-
-							<a href="#" id="add-cart">add to cart</a>
+							</span>
 
 						</div>
 
-						<div class="slide-text-section">
+						<a data-id="4" href="#" class="add-cart">add to cart</a>
 
-							<a href="#" class="product-name">oversized coat</a>
+					</div>
 
-							<span class="price">150.00$ - 154.00$</span>
+					<div class="slide-text-section">
 
-							<div class="wishlist">
+						<a href="#" class="product-name">oversized coat</a>
 
-								<i class="fas fa-chart-area"></i>
-								<i class="far fa-heart"></i>
-								<i class="fas fa-eye"></i>
+						<div>
+							<span class="price">154.00$</span>
+						</div>
 
-							</div>
+						<div class="wishlist">
+
+							<i class="fas fa-chart-area"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-eye"></i>
 
 						</div>
 
@@ -602,51 +649,50 @@ SUB MAIN
 				</div>
 
 				<div class="slide">
-					
-					<div>
 
-						<div class="slide-image-section">
+					<div class="slide-image-section">
 
-							<div class="images">
+						<div class="images">
 
-								<img src="images/SHORT-ANORAKA_4-370x458.jpg">
-								<img src="images/SHORT-ANORAKA_3-370x458.jpg">
-
-							</div>
-
-							<div>
-
-								<span class="on-sale">sale</span>
-
-								<span class="rating">
-
-										<i class="material-icons">star</i>
-										<i class="material-icons">star</i>
-										<i class="material-icons">star</i>
-										<i class="material-icons">star</i>
-										<i class="material-icons">star</i>
-
-								</span>
-
-							</div>
-
-							<a href="#" id="add-cart">add to cart</a>
+							<img src="images/SHORT-ANORAKA_4-370x458.jpg" alt="anoraka-1">
+							<img src="images/SHORT-ANORAKA_3-370x458.jpg" alt="anoraka-2">
 
 						</div>
+
+						<div>
+
+							<span class="on-sale">sale</span>
+
+							<span class="rating">
+
+									<i class="material-icons">star</i>
+									<i class="material-icons">star</i>
+									<i class="material-icons">star</i>
+									<i class="material-icons">star</i>
+									<i class="material-icons">star</i>
+
+							</span>
+
+						</div>
+
+						<a data-id="5" href="#" class="add-cart">add to cart</a>
+
+					</div>
 						
-						<div class="slide-text-section">
+					<div class="slide-text-section">
+						
+						<a href="#" class="product-name">short anoraka</a>
+	
+						<div>
+							<span class="old-price">125.00$</span>
+							<span class="price"> 120.00$</span>
+						</div>
+
+						<div class="wishlist">
 							
-							<a href="#" class="product-name">short anoraka</a>
-
-							<span class="price"><span>125.00$</span> 120.00$</span>
-
-							<div class="wishlist">
-								
-								<i class="fas fa-chart-area"></i>
-								<i class="far fa-heart"></i>
-								<i class="fas fa-eye"></i>
-
-							</div>
+							<i class="fas fa-chart-area"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-eye"></i>
 
 						</div>
 
@@ -674,8 +720,8 @@ SUB MAIN
 							
 							<div class="images">
 
-								<img src="images/TULLE-TIGER-T-SHIRT_1-370x458.jpg">
-								<img src="images/TULLE-TIGER-T-SHIRT_3-370x458.jpg">
+								<img src="images/TULLE-TIGER-T-SHIRT_1-370x458.jpg" alt="tulle-1">
+								<img src="images/TULLE-TIGER-T-SHIRT_3-370x458.jpg" alt="tulle-2">
 
 							</div>
 
@@ -695,16 +741,19 @@ SUB MAIN
 
 							</div>
 
-							<a href="#" id="add-cart">add to cart</a>
+							<a data-id="6" href="#" class="add-cart">add to cart</a>
 
 						</div>
 						
 						<div class="slide-text-section">
 
-							<a href="#" class="product-name">tulle tiger t-shirt</a>
+							<a data-id="6" href="#" class="product-name">tulle tiger t-shirt</a>
 
-							<div class="price"><span class="discount">26.00$</span> 21.00$</div>
-
+							<div>
+								<span class="old-price">26.00$</span> 
+								<span class="price"> 21.00$</span>
+							</div>
+							
 							<div class="wishlist">
 
 								<i class="fas fa-chart-area"></i>
@@ -722,8 +771,8 @@ SUB MAIN
 							
 							<div class="images">
 
-								<img src="images/BASIC-LEATHER-JACKET_1-370x458.jpg">
-								<img src="images/BASIC-LEATHER-JACKET_3-370x458.jpg">
+								<img src="images/BASIC-LEATHER-JACKET_1-370x458.jpg" alt="leather-jacket-1">
+								<img src="images/BASIC-LEATHER-JACKET_3-370x458.jpg" alt="leather-jacket-2">
 
 							</div>
 
@@ -743,7 +792,7 @@ SUB MAIN
 
 							</div>
 
-							<a href="#" id="add-cart">add to cart</a>
+							<a data-id="3" href="#" class="add-cart">add to cart</a>
 						
 						</div>
 
@@ -751,7 +800,10 @@ SUB MAIN
 							
 							<a href="#" class="product-name">basic leather jacket</a>
 
-							<div class="price"><span class="discount">45.89$</span> 40.00$</div>
+							<div>
+								<span class="old-price">45.89$</span> 
+								<span class="price"> 40.00$</span>
+							</div>
 
 							<div class="wishlist">
 
@@ -771,8 +823,8 @@ SUB MAIN
 							
 							<div class="images">
 
-								<img src="images/POLISHED-COAT_1-370x458.jpg">
-								<img src="images/POLISHED-COAT_1-370x458.jpg">
+								<img src="images/POLISHED-COAT_1-370x458.jpg" alt="coat-1">
+								<img src="images/POLISHED-COAT_1-370x458.jpg" alt="coat-2">
 
 							</div>
 
@@ -792,15 +844,18 @@ SUB MAIN
 
 							</div>
 
-							<a href="#" id="add-cart">add to cart</a>
+							<a data-id="7" href="#" class="add-cart">add to cart</a>
 
 						</div>
 						
 						<div class="slide-text-section">
 
-							<a href="#" class="product-name">polished coat</a>
+							<a data-id="7" href="#" class="product-name">polished coat</a>
 
-							<div class="price"><span class="discount">169.00$</span> 168.99$</div>
+							<div>
+								<span class="old-price">169.00$</span> 
+								<span class="price"> 160.99$</span>
+							</div>
 
 							<div class="wishlist">
 
@@ -820,8 +875,8 @@ SUB MAIN
 
 							<div class="images">
 
-								<img src="images/SHORT-ANORAKA_4-370x458.jpg">
-								<img src="images/SHORT-ANORAKA_3-370x458.jpg">
+								<img src="images/SHORT-ANORAKA_4-370x458.jpg" alt="anoraka-1">
+								<img src="images/SHORT-ANORAKA_3-370x458.jpg" alt="anoraka-2">
 
 							</div>
 
@@ -841,7 +896,7 @@ SUB MAIN
 
 							</div>
 
-							<a href="#" id="add-cart">add to cart</a>
+							<a data-id="5" href="#" class="add-cart">add to cart</a>
 
 						</div>
 						
@@ -849,7 +904,10 @@ SUB MAIN
 
 							<a href="#" class="product-name">short anoraka</a>
 
-							<div class="price"><span class="discount">125.00$</span> 120.00$</div>
+							<div>
+								<span class="old-price">125.00$</span>
+								<span class="price"> 120.00$</span>
+							</div>
 
 							<div class="wishlist">
 
@@ -881,7 +939,7 @@ SUB MAIN
 
 					<div class="latest-news-img">
 						
-						<img src="images/lisa-rvd-asos-570x370.jpg" alt="">
+						<img src="images/lisa-rvd-asos-570x370.jpg" alt="latest-news-1">
 
 						<div class="post-cats">
 							<a href="#">beauty</a>
@@ -912,7 +970,7 @@ SUB MAIN
 				<div id="ln-2" class="ln-slide">
 
 					<div class="latest-news-img">
-						<img src="images/look7-570x370.jpg" alt="">
+						<img src="images/look7-570x370.jpg" alt="latest-news-2">
 					</div>
 
 					<div class="latest-news-text">
@@ -931,7 +989,7 @@ SUB MAIN
 				<div id="ln-3" class="ln-slide">
 
 					<div class="latest-news-img">
-						<img src="images/look7-look7-570x370.jpg" alt="">
+						<img src="images/look7-look7-570x370.jpg" alt="latest-news-3">
 						<div class="post-cats">
 							<a href="#">beauty</a>
 							<a href="#">clothes</a>
@@ -955,7 +1013,7 @@ SUB MAIN
 				<div id="ln-4" class="ln-slide">
 
 					<div class="latest-news-img">
-						<img src="images/look8-look8-570x370.jpg" alt="">
+						<img src="images/look8-look8-570x370.jpg" alt="latest-news-4">
 						<div class="post-cats">
 							<a href="#">beatuy</a>
 							<a href="#">clothes</a>
@@ -983,7 +1041,7 @@ SUB MAIN
 				<div id="ln-5" class="ln-slide">
 
 					<div class="latest-news-img">
-						<img src="images/look6-look6-570x370.jpg" alt="">
+						<img src="images/look6-look6-570x370.jpg" alt="latest-news-5">
 						
 					</div>
 
@@ -1012,7 +1070,7 @@ SUB MAIN
 				<h3>#share your look with us</h3>
 			</div>
 
-			<div class="look-images">
+			<div class="look-images" onclick="">
 
 				<div class="look-image">
 
@@ -1024,7 +1082,7 @@ SUB MAIN
 					</a>
 				</div>
 
-				<div class="look-image">
+				<div class="look-image" onclick="">
 					
 					<span>
 						<i class="fas fa-shopping-bag"></i>
@@ -1035,7 +1093,7 @@ SUB MAIN
 
 				</div>
 
-				<div class="look-image">
+				<div class="look-image" onclick="">
 					
 					<span>
 						<i class="fas fa-shopping-bag"></i>
@@ -1046,7 +1104,7 @@ SUB MAIN
 
 				</div>
 
-				<div class="look-image">
+				<div class="look-image" onclick="">
 				
 					<span>
 						<i class="fas fa-shopping-bag"></i>
@@ -1056,7 +1114,7 @@ SUB MAIN
 					</a>
 				</div>
 
-				<div class="look-image">
+				<div class="look-image" onclick="">
 					
 					<span>
 						<i class="fas fa-shopping-bag"></i>
@@ -1067,7 +1125,7 @@ SUB MAIN
 
 				</div>
 
-				<div class="look-image">
+				<div class="look-image" onclick="">
 					
 					<span>
 						<i class="fas fa-shopping-bag"></i>
@@ -1166,7 +1224,7 @@ SUB MAIN
 			</div>
 
 		</div>
-
+<!-- ===============FOOTER==================== -->
 		<footer>
 		
 			<div class="container">
@@ -1190,10 +1248,9 @@ SUB MAIN
 		</footer>
 
 	</div>
+	
+	<button id="toTop"><i class="fas fa-angle-up"></i></button>
 
-
-
-<!--  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </body>
 
 </html>
